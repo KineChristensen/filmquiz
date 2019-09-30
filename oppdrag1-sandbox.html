@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmQuiz!</title>
+    <link rel="icon" type="image/ico" href="images/favicon1.png">
+    <link rel="stylesheet" type="text/css" href="css/meyers-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/oppdrag1-sandbox.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,500,700" rel="stylesheet">
+</head>
+<body>
+
+    <div id="main-page-container">
+
+        <!--Simple header. Clicking the logo will load the page again and allow the user to restart at any moment-->
+        <header>
+            <h1 id="header-h1"><a href="oppdrag1-sandbox.html">FilmQuiz!</a></h1>
+        </header>
+
+        <!--The flow of the quiz consists of 4 sections. The current section is shown to the user while the other 3
+            are hidden, and shown to the user at the appropriate moment-->
+        <main id="quiz-main">
+
+            <!--Simple start page. Clicking start will show the first question in the quiz section-->
+            <section class="quiz-section" id="start-section">
+                <img class="img start-img" src="images/oppdrag1/filmquiz.jpg">          
+                <h2 class="header-h2">Test filmkunnskapene dine her!</h2>
+                <input class="btn start-btn" type="button" value="START">
+            </section>
+
+            <!--The questions are shown here, and 4 answer alternatives. Also shown is which question
+                the user is currently on, and an image related to the question. When the user clicks an alternative
+                the next section is shown-->
+            <section class="quiz-section" id="question-section">
+                <p id="counter"></p>            
+                <h2 class="header-h2" id="question"></h2>
+                <img class="img movie-img" src="">
+                <div id="answer-alt">
+                    <input class="btn alt alt1" type="button" value="">
+                    <input class="btn alt alt2" type="button" value="">
+                    <input class="btn alt alt3" type="button" value="">
+                    <input class="btn alt alt4" type="button" value="">
+                </div>
+            </section>
+
+            <!--The user get feedback corresponding to whether they answered right or wrong, and
+                the total score so far is shown after each question has been answered. Clicking next
+                will show the enxt question-->
+            <section class="quiz-section" id="score-section">
+                <img class="img score-img" src="">
+                <h2 class="header-h2" id="correct-output"></h2>
+                <p class="score">Din score:</p> 
+                <div class="points-wrapper">
+                    <p><span class="points"></span> poeng</p>
+                    <p id="points-animation"></p> 
+                </div>
+
+                <input class="btn next-btn" type="button" value="NESTE">
+            </section>
+
+            <!--When the last question in the quiz has been answered, 
+                the final score is shown to the user, and how many questions they were able
+                to answer correct. They can also click "Prøv igjen" to restart the quiz-->
+            <section class="quiz-section" id="end-section">
+                <img class="img end-img" src="">
+                <h2 class="header-h2" id="end-output"></h2>
+                <p id="score-details"></p>
+                <p class="score">Din totale score:</p>
+                <div class="points-wrapper">
+                    <p><span class="points"></span> poeng</p>
+                </div>
+
+                <input class="btn restart-btn" type="button" value="PRØV IGJEN">
+            </section>
+
+        </main><!--END main quizsection-->
+
+        <!--Very simple footer-->
+        <footer id="footer">
+            <p>&copy;2019 Quizmaster K</p>
+        </footer>
+
+    </div><!--END main page container-->
+
+    
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/oppdrag1-sandbox.js"></script>
+
+</body>
+</html>

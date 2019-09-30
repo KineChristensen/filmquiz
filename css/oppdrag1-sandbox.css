@@ -1,0 +1,11 @@
+/*Hover effect for buttons. The rest of the styling is done with jquery in the js-file.
+(The task description required styling to be done in JS)*/
+
+.btn{
+    background-color: #e5be20;
+}
+
+.btn:hover{
+    background-color: #ffda48;
+}
+
